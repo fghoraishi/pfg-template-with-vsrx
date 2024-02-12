@@ -15,21 +15,21 @@ resource "ibm_is_vpc_address_prefix" "vpc_vpc_zone_1_prefix" {
   name = "${var.prefix}-vpc-vpc-zone-1"
   vpc  = ibm_is_vpc.vpc_vpc.id
   zone = "${var.region}-1"
-  cidr = "10.10.0.0/22"
+  cidr = "10.10.0.0/16"
 }
 
 resource "ibm_is_vpc_address_prefix" "vpc_vpc_zone_2_prefix" {
   name = "${var.prefix}-vpc-vpc-zone-2"
   vpc  = ibm_is_vpc.vpc_vpc.id
   zone = "${var.region}-2"
-  cidr = "10.20.0.0/22"
+  cidr = "10.20.0.0/16"
 }
 
 resource "ibm_is_vpc_address_prefix" "vpc_vpc_zone_3_prefix" {
   name = "${var.prefix}-vpc-vpc-zone-3"
   vpc  = ibm_is_vpc.vpc_vpc.id
   zone = "${var.region}-3"
-  cidr = "10.30.0.0/22"
+  cidr = "10.30.0.0/16"
 }
 
 resource "ibm_is_subnet" "vpc_vsi_zone_1" {
